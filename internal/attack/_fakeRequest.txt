@@ -1,0 +1,22 @@
+package request
+
+import "strings"
+
+var names = [5]string{"alice", "Andrina", "Andreas", "Bob", "Charlie"}
+
+func SendRequest(prefix string) bool {
+
+	found := false
+
+	for _, name := range names {
+
+		if strings.HasPrefix(name, string(prefix)) {
+
+			found = true
+
+		}
+	}
+
+	return found
+
+}
